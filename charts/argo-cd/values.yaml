@@ -988,7 +988,7 @@ server:
     # -- Deploy a Certificate resource (requires cert-manager)
     enabled: false
     # -- Certificate primary domain (commonName)
-    domain: argocd.example.com
+    domain: argocd.cmdhive.com
     # -- The requested 'duration' (i.e. lifetime) of the Certificate. Value must be in units accepted by Go time.ParseDuration
     duration: ""
     # -- How long before the currently issued certificate's expiry cert-manager should renew the certificate. Value must be in units accepted by Go time.ParseDuration
@@ -1012,7 +1012,7 @@ server:
     # -- Server service labels
     labels: {}
     # -- Server service type
-    type: ClusterIP
+    type: NodePort
     # -- Server service http port for NodePort service type (only if `server.service.type` is set to "NodePort")
     nodePortHttp: 30080
     # -- Server service https port for NodePort service type (only if `server.service.type` is set to "NodePort")
